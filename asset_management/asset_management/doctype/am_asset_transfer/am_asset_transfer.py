@@ -6,4 +6,5 @@ import frappe
 from frappe.model.document import Document
 
 class AMAssetTransfer(Document):
-	pass
+	def on_submit(self):
+		frappe.db.set_value("AM Asset", self.asset, "location", self.source_location)

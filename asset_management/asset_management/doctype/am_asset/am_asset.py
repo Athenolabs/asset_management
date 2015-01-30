@@ -3,8 +3,8 @@
 
 from __future__ import unicode_literals
 import frappe
-from frappe.utils.nestedset import NestedSet
+from frappe.model.document import Document
 
-class AMAsset(NestedSet):
-	nsm_parent_field = 'parent_am_asset'
+
+class AMAsset(Document):
 	pass
